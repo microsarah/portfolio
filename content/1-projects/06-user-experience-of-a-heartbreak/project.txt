@@ -1,0 +1,41 @@
+Projectnum: 6
+
+----
+
+Title: User Experience of a Heartbreak
+
+----
+
+Summary: A study of digital heartbreak at the close of a relationship.
+
+----
+
+Role: creator
+
+----
+
+Text:
+
+A series of animations documenting the ways in which our use of and feelings toward technology might change during a breakup, and how couples can remain digitally intertwined after separating. It questions the inhumane nature of algorithms and their overwhelming presence in our everyday lives & interactions.
+
+We have parted. Our ties are severed. But the internet remembers us.
+
+<a href="http://ux3.us" target="blank">ux3.us</a>
+
+
+----
+
+Press:
+<a href="http://beautifuldecay.com/2014/10/29/sarah-hallachers-gifs-show-painful-effects-technology-social-media-breakup/" target="blank">Beautiful Decay</a>
+<a href="http://designtaxi.com/news/370159/GIFs-Depicting-Online-Memories-That-Live-On-After-A-Heartbreak/" target="blank">Design Taxi</a>
+<a href="http://dumboartsfestival.com/" target="blank">Dumbo Arts Festival</a>
+Facebook (internal publication)
+<a href="http://www.fastcoexist.com/3036536/this-is-the-user-experience-of-a-heartbreak" target="blank">FastCo Exist</a>
+<a href="http://fusion.net/story/166932/i-tried-all-the-apps-that-are-supposed-to-mend-a-broken-heart/" target="blank">Fusion</a>
+<a href="http://www.huffingtonpost.com/2014/11/10/sarah-hallacher_n_6103242.html" target="blank">Huffington Post</a>
+<a href="http://www.metro.us/lifestyle/breaking-up-in-the-social-media-age-is-more-complicated-than-you-d-think/zsJnke---GVUnmpEBxpM/" target="blank">The Metro</a>
+
+
+----
+
+Year: 2014

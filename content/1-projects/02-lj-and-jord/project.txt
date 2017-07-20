@@ -1,0 +1,25 @@
+Projectnum: 2
+
+----
+
+Title: Jordan + LJ
+
+----
+
+Summary: A digital wedding invitation for a ~very cool~ pair.
+
+----
+
+Role: web design, web development
+
+----
+
+Text:
+
+It was an honor to created this wedding site for Laura Jo Hess and Jordan Yearsley. My favorite part of this project was incorporating drawings by the couple into the design of the site.
+
+<a href="http://ljandjordgetmarried.com" target="blank">ljandjordgetmarried.com</a>
+
+----
+
+Year: 2015

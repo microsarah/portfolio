@@ -1,0 +1,43 @@
+Projectnum: 1
+
+----
+
+Title: General Assembly
+
+----
+
+Summary: Product and interface design for an online education tool.
+
+----
+
+Role: product design, development, SME (subject matter expert)
+
+----
+
+Text:
+
+My work at <a href="http://generalassemb.ly" target="blank">General Assembly</a> is a good representation of the range of my strengths as a product designer. I was brought on to solve problems such as enhancing the scalability and usability of our online courses,  increasing student engagement in data collection surveys, beautifying computer science graphics, and more.
+
+The project featured below showcases a redesign for interactive code challenges in the Circuits product– an online course that uses blended learning to teach concepts like Data Analytics, Web Design, and JavaScript. The code-challenge allows the student to complete programming challenges that reinforce their learnings, as well as guide them through debugging with several tiers of error tracking, hints, and answers.
+
+Problem: The original code-challenge tool was custom-built with the Web Design Circuit in mind, and is not scalable for developers, instructional designers, and visual designers.
+
+[insert screenshot of old interface w/notations on issues]
+
+[1] Content is delivered in JPGs; edits require additional production support
+[2] Help section automatically gives answer; does not support independent research/learning
+[3] User navigation is manual and crowded
+
+Solutions:
+[1] Develop an interface that accepts plaintext for course-agnostic content
+[2] Design a system of delivery for hints and answers that support independent learning
+[3] Allow student to move between steps with ease
+[4] Create a visual standard for colors used in various programming languages
+
+[images/videos of all]
+
+Because I also have experience as a web developer, I was also helpful in writing the test code that checks the students answers using <a href="http://chaijs.com/" target="blank">Chai</a>.
+
+----
+
+Year: 2014 -2017

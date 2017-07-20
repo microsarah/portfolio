@@ -1,0 +1,25 @@
+Projectnum: 3
+
+----
+
+Title: invibed dot com
+
+----
+
+Summary: A fresh look for young adult financial resources.
+
+----
+
+Role: web design, web development
+
+----
+
+Text:
+
+A sweet little design + build update for <a href="http://invibed.com" target="blank">invibed</a>, a finance site for millennials. I had the great pleasure to work in tandem with the fabulous (and yes, Blissful) <a href="http://josephjbliss.com/" target="blank">Joe Bliss</a>, who provided JS and Wordpress Integration.
+
+<a href="http://invibed.com" target="blank">invibed.com</a>
+
+----
+
+Year: 2015
