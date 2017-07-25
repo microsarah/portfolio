@@ -3,75 +3,107 @@
 
   <main class="main" role="main">
 
+    <!-- =====  Project Header  ===========================  -->
     <header class="projectHeader" id="title">
       <h4 class="projectNum"><?= $page->projectNum() ?></h4>
       <h1 class="projectTitle"><?= $page->title()->html() ?></h1>
       <h2 class="projectSummary"><?= $page->summary() ?></h2>
     </header>
-
     <div class="projectThumb">
-      <!-- fetch the first image -->
       <?php if($image = $page->image('project-thumb.jpg')): ?>
         <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
       <?php endif ?>
     </div>
 
+    <!-- =====  Main Project Info  ===========================  -->
     <section class="projectInfo cf">
-      <div class="projectDesc col-content col-2">
+      <div class="projectDesc col-2">
         <h3><?= $page->role() ?></h3>
         <?= $page->text()->kirbytext() ?>
       </div>
-      <div class="projectPress col-content col-2"><?= $page->press() ?></div>
+      <div class="projectPress col-2"><?= $page->press() ?></div>
     </section>
 
-    <div class="projectFeature">
-      <?php if($image = $page->image('feature-large.jpg')): ?>
+    <!-- =====  Hero Image  ===========================  -->
+    <div class="projectHero">
+      <?php if($image = $page->image('hero-image.jpg')): ?>
         <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
       <?php endif ?>
     </div>
 
+    <!-- =====  Process Image + Caption  ===========================  -->
     <section class="projectDetails">
-
-      <?php if($image = $page->image('process-1.jpg')): ?>
-      <div class="processContainer cf">
+      <?php if($image = $page->image('process.jpg')): ?>
+      <div class="projectProcess cf">
+        <div class="col-2">
+            <p><?= $page->process() ?></p>
+        </div>
         <div class="col-2">
           <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
-        </div>
-        <div class="processStatement">
-          <h3><?= $page->process() ?></h3>
         </div>
       </div>
       <?php endif ?>
 
-      <div class="cf">
-        <p class="compareStatement"><?= $page->compare() ?></p>
+      <!-- =====  Journey Caption + Image  ===========================  -->
+      <div class="cf projectJourney">
+        <p><?= $page->journey() ?></p>
         <?php if($image = $page->image('compare-old.jpg')): ?>
-          <figure class="col-content col-2">
+          <figure class="col-2">
             <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
           </figure>
         <?php endif ?>
         <?php if($image = $page->image('compare-new.jpg')): ?>
-          <figure class="col-content col-2">
+          <figure class="col-2">
             <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
           </figure>
         <?php endif ?>
       </div>
-
-      <?php if($image = $page->image('feature-1.jpg')): ?>
-          <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
-      <?php endif ?>
-      <?php if($image = $page->image('feature-2.jpg')): ?>
-          <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
-      <?php endif ?>
-      <?php if($image = $page->image('feature-3.jpg')): ?>
-          <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
-      <?php endif ?>
-
     </section>
 
-
+      <!-- =====  Gallery  ===========================  -->
+    <section class="gallery">
+      <div class="cf">
+      <?php $images = $page->images()->filterBy('filename', '*=', 'gallery-1');
+        if($images->count() > 0): ?>
+        <?php foreach($images as $image): ?>
+          <figure class="col-2 primaryGallery">
+            <figcaption><?php echo html($image->caption()) ?></figcaption>
+        		<img src="<?php echo $image->url() ?>" alt="<?php echo $image->title() ?>">
+          </figure>
+        <?php endforeach ?>
+        <?php endif ?>
+        <?php $images = $page->images()->filterBy('filename', '*=', 'gallery-2');
+          if($images->count() > 0): ?>
+          <?php foreach($images as $image): ?>
+            <figure class="col-2 secondaryGallery">
+              <figcaption><?php echo html($image->caption()) ?></figcaption>
+              <img src="<?php echo $image->url() ?>" alt="<?php echo $image->title() ?>">
+            </figure>
+          <?php endforeach ?>
+          <?php endif ?>
+      </div>
+      <div class="cf">
+      <?php $images = $page->images()->filterBy('filename', '*=', 'gallery-3');
+        if($images->count() > 0): ?>
+        <?php foreach($images as $image): ?>
+          <figure class="col-2 primaryGallery">
+            <figcaption><?php echo html($image->caption()) ?></figcaption>
+            <img src="<?php echo $image->url() ?>" alt="<?php echo $image->title() ?>">
+          </figure>
+        <?php endforeach ?>
+      <?php endif ?>
+      <?php $images = $page->images()->filterBy('filename', '*=', 'gallery-4');
+        if($images->count() > 0): ?>
+        <?php foreach($images as $image): ?>
+          <figure class="col-2 secondaryGallery">
+            <figcaption><?php echo html($image->caption()) ?></figcaption>
+            <img src="<?php echo $image->url() ?>" alt="<?php echo $image->title() ?>">
+          </figure>
+        <?php endforeach ?>
+        <?php endif ?>
+      </div>
+      </section>
     <?php snippet('prevnext') ?>
-
   </main>
 
 <?php snippet('footer') ?>

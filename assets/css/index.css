@@ -1,36 +1,5 @@
 @charset "UTF-8";
 /*
-  # Kirby Starterkit
-
-  This CSS file handles all of the styling in of Kirby’s
-  Starterkit. Feel free to tinker around with it and
-  adjust it according to your needs.
-
-  ## Color Definitions
-
-  The following colors used in the Starterkit. If you want
-  to use this CSS file as a starting point for your own
-  project, you can do a simple search & replace to adjust
-  the color scheme to your needs.
-
-  - Background:            #fffff8
-  - Text:                  #261e66
-  - Hovered Links:         #560bed
-  - Active Button BG:      #4509be
-  - Caption BG in projects
-    showcase:              rgba(38, 30, 102, .95)
-
-  - Highlight, Selection,
-    Link Underline:        #337ab7
-  - Tap color
-    (touch devices):       rgba(113, 239, 172, .5)
-  - Marked Text BG,
-    Callout Boxes BG:      #eafded
-
-  - Menu Separator,
-    <hr> in text:          #a8a5be
-  - Blockquote BG:         #fffffd
-
   ## Table of Contents
 
   1 Global Rules & Definitions
@@ -40,9 +9,7 @@
   1.4 Images & Figures
 
   2 Layout Helpers & Reusable Components
-  2.1 Kirbytext
-  2.2 Button
-  2.3 Grid & Layout
+  2.1 Grid & Layout
   2.4 Pagination
   2.5 Projects Showcase
 
@@ -55,8 +22,6 @@
   4 Template-specific Components
   4.1 Homepage
   4.2 Project
-  4.3 Team
-  4.4 Contact
 
 */
 
@@ -187,6 +152,8 @@ figure{
 figcaption {
   font-size: .75rem;
   line-height: 1.5rem;
+	padding: 4em 0;
+	text-align: center;
 }
 
 /* =====  2 Layout Helpers & Reusable Components  =========================== */
@@ -201,126 +168,43 @@ figcaption {
   clear: both;
 }
 
-/* -----  2.1 Kirbytext  ---------------------------------------------------- */
+/* -----  2.1 Grid & Layout  ------------------------------------------------ */
 
-/*.intro {
-  text-align: center;
-  font-weight: 500;
-  font-size: 1.125rem;
-  margin-bottom: 3rem;
+section{
+	padding: 0 10%;
 }
 
-h1 + .intro {
-  margin-top: -2.25rem;
-}*/
-
-/*.text h2, .text h3 {
-  margin-top: 3rem;
+.col-4 {
+  width: 25%;
 }
 
-.text ul, .text ol {
-  margin-left: 1.5em;
+.col-3{
+	width:33.3333%;
 }
 
-.text hr {
-  color: #a8a5be;
+.col-2{
+	width:50%;
 }
 
-.text ul {
-  list-style: none;
+.col-4,
+.col-3,
+.col-2 {
+	  float: left;
 }
 
-.text ul > li::before {
-  content: "–";
-  display: inline-block;
-  position: relative;
-  width: 1.25em;
-  margin-right: -1.25em;
-  left: -1.25em;
-  padding-left: .25em;
-}
-
-.text ol > li {
-  list-style: decimal;
-}
-
-.text pre, .text code {
-  background-color: #eafded;
-  font-family: 'Inconsolata', monospace;
-  font-size: .75rem;
-}
-
-.text code {
-  margin: -.25em 0;
-  padding: .25em .15em;
-  position: relative;
-  bottom: .05em;
-}
-
-.text pre > code {
-  display: block;
-  margin: 0;
-  padding: .8em;
-  position: static;
-  bottom: auto;
-  overflow-x: auto;
-}
-
-@supports (-webkit-overflow-scrolling: touch) {
-  .text pre > code {
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
+@media all and (max-width: 62.5em) {
+  .col-4,
+	.col-3 {
+    width: 33.33%;
   }
 }
 
-.text kbd {
-  padding: 3px 7px;
-  margin: -3px 2px;
-  font-size: 75%;
-  line-height: 1;
-  background: #e9e9e9;
-  border-radius: 4px;
-  box-shadow: 0 2px 0 #c9c7d4;
-  font-family: 'Inconsolata', monospace;
-  position: relative;
-  bottom: 2px;
-}
-
-.text blockquote {
-  font-family: 'Inconsolata', monospace;
-  border-left: 2px solid #a8a5be;
-  padding: .75rem;
-  background: #fffffd;
-}
-
-.text blockquote :last-child {
-  margin-bottom: 0;
-}*/
-
-/* -----  2.2 Button  ------------------------------------------------------- */
-
-
-
-/* -----  2.3 Grid & Layout  ------------------------------------------------ */
-
-
-
-@media all and (min-width: 31.5em) {
-  .wrap:not(.wide) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media all and (min-width: 38.25em) {
-  .wrap {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-  .wrap.wide {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
+@media (max-width: 45em) {
+	.col-4,
+	.col-3,
+	.col-2 {
+		  width: 100%;
+	}
 }
 
 /* -----  2.4 Pagination  --------------------------------------------------- */
@@ -334,18 +218,13 @@ h1 + .intro {
   width: 1.75rem;
   height: 1.75rem;
   border-radius: 50%;
-  background: #efeeed;
   color: #261e66;
   border-bottom: 0;
 }
 
 .pagination-item:hover, .pagination-item:focus {
   background: #261e66;
-  color: #337ab7;
-}
-
-.pagination-item:active {
-  background: #4509be;
+  color: #fffff8;
 }
 
 .pagination-item.left {
@@ -370,9 +249,7 @@ h1 + .intro {
 }
 
 .pagination-item.is-inactive {
-  color: #e4e3e6;
-  border: 2px solid currentColor;
-  background: transparent;
+	display: none;
 }
 
 @media all and (min-width: 75em) {
@@ -439,10 +316,6 @@ h1 + .intro {
 
 .showcase-caption {
   position: absolute;
-  /*top: .75rem;
-  left: .75rem;
-  right: .75rem;
-  bottom: .75rem;*/
 	top: 0;
   left: 0;
   right: 0;
@@ -553,9 +426,9 @@ body {
   padding-top: 1.5rem;
 }
 
-.home-title {
+.home-title p{
 		font-size: 4.5vw;
-    line-height: 1em;
+    line-height: 4rem;
     width: 10em;
     position: fixed;
     top: 40vh;
@@ -563,7 +436,6 @@ body {
 }
 
 .intro-text{
-
 	height:60vh;
 }
 
@@ -662,23 +534,6 @@ body {
   border-bottom: 0;
 }
 
-.footer .heart {
-  /* The heart character of Arial Unicode MS looks just
-     surprisingly nice … */
-  font-family: "Arial Unicode MS", Arial, sans-serif;
-  display: inline-block;
-}
-
-.footer-madewithkirby a:hover .heart {
-  animation: pulsing-heart .6s linear infinite;
-}
-
-@media all and (min-width: 48em) {
-  .footer-copyright, .footer-madewithkirby {
-    display: inline;
-  }
-}
-
 /* -----  3.4 Main Content  ------------------------------------------------- */
 
 
@@ -692,26 +547,17 @@ body {
 	background-size:40%;
 	z-index: -2;
 }
+
 .projects-section {
-  /*background: #fffff8;*/
-	/*background: -webkit-linear-gradient(top, rgba(255, 255, 248, 0) 0%, rgba(255, 255, 248, 1) 20%);
-    background: -moz-linear-gradient(top, rgba(255, 255, 248, 0) 0%, rgba(255, 255, 248, 1) 20%);
-    background: -ms-linear-gradient(top, rgba(255, 255, 248, 0) 0%, rgba(255, 255, 248, 1) 20%);
-    background: -o-linear-gradient(top, rgba(255, 255, 248, 0) 0%, rgba(255, 255, 248, 1) 20%);
-    background: linear-gradient(top, rgba(255, 255, 248, 0) 0%, rgba(255, 255, 248, 1) 20%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffff8', endColorstr='#fffff8',GradientType=0 );*/
   margin-top: 20vh;
   padding-top: .75rem;
   padding-bottom: .75rem;
-	/*z-index: -1;*/
 }
 
 .projects-title{
 	font-size: 1.5em;
-	/*padding: 7em 0 1em;*/
 	text-align: center;
 	font-style: italic;
-	/*color: #337ab7;*/
 }
 
 .projects-section-more {
@@ -720,12 +566,73 @@ body {
 
 /* ----- 4.2 Project  -------------------------------------------------- */
 
+.gallery{
+	max-width:1400px;
+	margin:auto;
+	padding:0 10% 20em;
+}
+
+.primaryGallery{
+	padding: 0 10em 0 0;
+}
+
+.secondaryGallery{
+	position: relative;
+	top: 20em;
+}
+
+.projectProcess {
+	position: relative;
+	max-width: 1200px;
+	margin: auto;
+	padding: 7em 0;
+}
+
+.projectProcess img{
+	padding:12.5em 0 0;
+}
+
+.projectDetails{
+	position: relative;
+	text-align: center;
+	padding: 5em 10%;
+}
+
+.projectDetails p{
+	font-family: 'Larsseit-Medium', Helvetica, Arial, sans-serif;
+	font-size: 1.25em;
+  font-weight: 700;
+	line-height: 1.8rem;
+	padding: 0 5em 0 0;
+	text-align: left;
+	max-width: 100%;
+}
+
+.projectJourney p{
+	margin:3em auto 5em;
+	text-align: center;
+}
+
+.projectHero{
+	max-width:1800px;
+	margin:auto;
+}
+
 .projectHeader{
 	padding: 20vh 0 0;
 	width:50%;
 	height: 100vh;
 	max-width: 45em;
 	margin:auto;
+}
+
+.projectJourney{
+	max-width:1400px;
+	margin:auto;
+}
+
+.projectInfo{
+	padding: 0 10%;
 }
 
 .projectNum{
@@ -739,11 +646,12 @@ body {
 	border-radius:50%;
 }
 
-.projectTitle{
-	font-size:.8em;
-	text-align: center;
-	font-family: 'Larsseit-Light';
-	margin: 0 0 7em;
+.projectPress{
+	padding:12rem 0 5rem 12rem;
+}
+
+.projectPress li{
+	margin:1rem;
 }
 
 .projectSummary{
@@ -752,43 +660,14 @@ body {
 	text-align: left;
 }
 
-.projectInfo{
-	padding: 0 10%;
-}
-
-.projectPress{
-
-}
-
-.projectPress li{
-	margin:1rem;
-}
-
-.projectDetails{
-	text-align: center;
-}
-
-.processContainer {
-	position: relative;
-}
-
-.processStatement{
-	width:50%;
-	padding:0 5%;
-	position: relative;
-  top: 50%;
-	left:50%;
-  transform: translateY(-50%);
-}
-
-.processStatement h3{
-	line-height: 1.8rem;
-	max-width: 32rem;
-	margin:auto;
-}
-
-.compareStatement{
-	margin:3rem auto 10rem;
+.projectThumb{
+	position: absolute;
+	width:500px;
+	height:500px;
+	top:7em;
+	right:2em;
+	z-index: -1;
+	overflow: hidden;
 }
 
 .projectThumb img{
@@ -797,158 +676,70 @@ body {
 	opacity: 0.8;
 }
 
-
-/* -----  4.3 Team  --------------------------------------------------------- */
-
-.team {
-  margin-top: 3rem;
+.projectTitle{
+	font-size:.8em;
+	text-align: center;
+	font-family: 'Larsseit-Light';
+	margin: 0 0 7em;
 }
 
-.team-item {
-  margin-bottom: 3rem;
-}
-
-@media all and (min-width: 30em) {
-  .team-item {
-    width: 50%;
-  }
-}
-
-@media all and (min-width: 62.5em) {
-  .team-item {
-    width: 25%;
-  }
-}
-
-.team-portrait img {
-  /* Eliminate bottom margin */
-  display: block;
-}
-
-.team-name {
-  margin-bottom: 0;
-}
-
-.team-about, .team-contact {
-  font-size: .85em;
-}
-
-.team-contact a {
-  word-wrap: break-word;
-}
-
-/* -----  4.4 Contact  ------------------------------------------------------ */
-
-.contact-options {
-  list-style: none;
-  margin-bottom: 3rem;
-  margin-left: -.375rem;
-  margin-right: -.375rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-
-
-
-.col-4,
-.col-3,
-.col-2 {
-	  width: 100%;
-}
-
-@media all and (min-width: 40em) {
-  .col-4,
-	.col-3 {
-    width: 50%;
-  }
-}
-
-@media (min-width: 62.5em) {
-  .col-4 {
-    width: 25%;
-  }
-
-	.col-3{
-		width:33.3333%;
+@media all and (max-width: 73.33em) {
+	.primaryGallery {
+    padding: 0 4em 0 0;
 	}
 
-	.col-2{
-		width:50%;
+	/*.projectDetails{
+		padding: 0 0 3em;
+	}*/
+
+	.projectHeader{
+		width: auto;
 	}
 
-	.col-4,
-	.col-3,
-	.col-2 {
-		  float: left;
+	/*.projectProcess .col-2{
+		float: none;
+		width:100%;
 	}
 
-	.projectPress{
-		padding:12rem 0 5rem 12rem;
-	}
+	.processStatement{
+		position: static;
+		top:0;
+		left:0;
+		transform:none;
+		padding:7em 0;
+	}*/
 
 	.projectThumb{
-		position: absolute;
-		width:500px;
-		height:500px;
-		top:7em;
-		right:2em;
-		z-index: -1;
-		overflow: hidden;
+		right: 0;
+		width: 400px;
+		height: 400px;
 	}
 }
 
-.col-4-icon {
-  max-width: 50%;
-  margin-bottom: 1.5em;
-}
-
-.col-4-title {
-  margin-bottom: 1.5em;
-}
-
-.col-content {
-  /*padding: 1.5rem 2.25em .375em;*/
-  /*-webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;*/
-}
-
-.col-content img{
-	max-width:500px;
-}
-
-.contact-twitter {
-  text-align: center;
-  font-weight: 500;
-  position: relative;
-}
-
-.contact-twitter h2 {
-  margin-bottom: 3rem;
-}
-
-.contact-twitter h2::before {
-  content: "";
-  display: block;
-  width: 3rem;
-  height: 3rem;
-  background: url(../images/logo.svg) 50% 50%/contain no-repeat;
-  margin: 3rem auto 1.5rem;
-}
-
-@media all and (min-width: 36em) {
-  .contact-twitter p:not(:first-of-type) {
-    width: 50%;
-    float: left;
-  }
-}
-
-@media all and (min-width: 46em) {
-  .contact-twitter p:not(:first-of-type) {
-    width: 33.33%;
-  }
+@media all and (max-width: 45em) {
+	figcaption{
+		font-size: 1em;
+	}
+	.gallery{
+		padding: 0 10% 5em;
+	}
+	.primaryGallery {
+    padding: 0;
+	}
+	.secondaryGallery{
+		position: static;
+		top:0;
+	}
+	.projectDetails p{
+		font-family: 'Larsseit-Light';
+		font-weight: normal;
+		font-size: 1em;
+		padding: 0;
+		text-align: center;
+	}
+	.projectProcess{
+		padding:3em 0;
+	}
+	.projectProcess img {
+    padding: 5em 0 0;
 }
