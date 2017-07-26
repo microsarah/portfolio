@@ -10,9 +10,12 @@
       <h2 class="projectSummary"><?= $page->summary() ?></h2>
     </header>
     <div class="projectThumb">
-      <?php if($image = $page->image('project-thumb.jpg')): ?>
-        <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
-      <?php endif ?>
+      <?php $images = $page->images()->filterBy('filename', '*=', 'project-thumb');
+        if($images->count() > 0): ?>
+        <?php foreach($images as $image): ?>
+          <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
+        <?php endforeach ?>
+        <?php endif ?>
     </div>
 
     <!-- =====  Main Project Info  ===========================  -->
@@ -26,9 +29,12 @@
 
     <!-- =====  Hero Image  ===========================  -->
     <div class="projectHero">
-      <?php if($image = $page->image('hero-image.jpg')): ?>
-        <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
-      <?php endif ?>
+      <?php $images = $page->images()->filterBy('filename', '*=', 'hero-image');
+        if($images->count() > 0): ?>
+        <?php foreach($images as $image): ?>
+          <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
+        <?php endforeach ?>
+        <?php endif ?>
     </div>
 
     <!-- =====  Process Image + Caption  ===========================  -->
@@ -107,8 +113,3 @@
   </main>
 
 <?php snippet('footer') ?>
-<script type="text/javascript">
-$(window).scroll(function(){
-    $("#title").css("opacity", 1 - $(window).scrollTop() / 400);
-});
-</script>

@@ -12,6 +12,8 @@
 </body>
 <script type="text/javascript">
 $(window).scroll(function(){
+    $("#title").css("opacity", 1 - $(window).scrollTop() / 400);
+
     if ( $(window).scrollTop() > 400 ) {
         $('a.top').fadeIn('slow');
     } else {
