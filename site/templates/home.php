@@ -1,13 +1,8 @@
 <?php snippet('head') ?>
 <body class="home" id="top">
 
-  <!-- <header class="header wrap wide" role="banner">
-    <div class="grid">
-
       <?php snippet('menu') ?>
 
-    </div>
-  </header> -->
 
   <main class="main" role="main">
 

@@ -23,6 +23,8 @@
   4.1 Homepage
   4.2 Project
 
+  5 Media Queries
+
 */
 
 /* =====  1 Global Rules & Definitions  ===================================== */
@@ -118,17 +120,17 @@ h4 {
 }
 
 p {
-	line-height: 1.5rem;
+	line-height: 1.75rem;
 	letter-spacing: .05rem;
 	max-width: 36rem;
-	margin:auto;
+	margin: 0 auto 1.5em;
 }
 
 /* Links */
 a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 2px solid #337ab7;
+  border-bottom: 1px dotted #337ab7;
 }
 
 a:hover, a:focus, a:active {
@@ -192,47 +194,24 @@ section{
 	  float: left;
 }
 
-@media all and (max-width: 62.5em) {
-  .col-4,
-	.col-3 {
-    width: 33.33%;
-  }
-}
-
-@media (max-width: 45em) {
-	.col-4,
-	.col-3,
-	.col-2 {
-		  width: 100%;
-	}
-}
 
 /* -----  2.4 Pagination  --------------------------------------------------- */
 
-.pagination {
-  margin-bottom: 1.5rem;
-}
-
 .pagination-item {
-  position: relative;
-  width: 1.75rem;
-  height: 1.75rem;
-  border-radius: 50%;
-  color: #261e66;
-  border-bottom: 0;
+	width: 1.75rem;
+	height: 1.75rem;
+	border-radius: 50%;
+	color: #261e66;
+	border-bottom: 0;
+	position: fixed;
+	top: 50%;
+	margin-top: -.875rem;
+	border-bottom: none;
 }
 
 .pagination-item:hover, .pagination-item:focus {
   background: #261e66;
   color: #fffff8;
-}
-
-.pagination-item.left {
-  float: left;
-}
-
-.pagination-item.right {
-  float: right;
 }
 
 .pagination-item svg {
@@ -244,6 +223,15 @@ section{
   height: 12px;
 }
 
+.pagination-item.left {
+	float: none;
+	left: 2.25rem;
+}
+.pagination-item.right {
+	float: none;
+	right: 2.25rem;
+}
+
 .pagination-item path {
   fill: currentColor;
 }
@@ -252,29 +240,8 @@ section{
 	display: none;
 }
 
-@media all and (min-width: 75em) {
-  .pagination-item {
-    position: fixed;
-    top: 50%;
-    margin-top: -.875rem;
-  }
-  .pagination-item.left {
-    float: none;
-    left: 2.25rem;
-  }
-  .pagination-item.right {
-    float: none;
-    right: 2.25rem;
-  }
-}
 
-@media all and (pointer: coarse) {
-  .pagination-item {
-    /* On touch-devices we increase prev/next buttons */
-    width: 2.25rem;
-    height: 2.25rem;
-  }
-}
+
 
 /* ----- 2.5 Projects Showcase ---------------------------------------------- */
 
@@ -290,20 +257,6 @@ section{
 
 .showcase-item a{
 	z-index: 3;
-}
-
-@media all and (min-width: 38em) {
-  .showcase-item {
-    width: 33.33%;
-  }
-  .showcase-item:nth-last-child(3n+2):first-child,
-  .showcase-item:nth-last-child(3n+2):first-child + .showcase-item, .showcase-item:nth-last-child(3n+1):first-child,
-  .showcase-item:nth-last-child(3n+1):first-child ~ .showcase-item:nth-child(-n+4) {
-    /* x = items
-       When x % 3 = 2, select first and second item:
-       When x % 3 = 1, select first 4 items: */
-    width: 50%;
-  }
 }
 
 .showcase-link {
@@ -353,23 +306,7 @@ section{
   opacity: 1;
 }
 
-@media (any-hover: none) {
-  .showcase-caption {
-    /* The media query, enclosing these rules matches only
-       touch-screen devices that do not support hover due
-       to the lack of a pointing device like a mouse.
-       It does not work in all mobile browsers, but
-       progressively enhances the experience on supported
-       devices. Tested in Safari (iOS) 9.3 */
-    opacity: 1.0;
-    /* Reset will-change property to keep it from eating
-       up unneccessary resources on touch-only devices */
-    will-change: auto;
-  }
-  .showcase-title {
-    font-size: .85em;
-  }
-}
+
 
 /* =====  3 Site Layout  ==================================================== */
 
@@ -396,14 +333,7 @@ html {
   -webkit-tap-highlight-color: #337ab7;
 }
 
-@media all and (max-width: 30em) {
-  html {
-    /* We decrease the font-size a little-bit for tiny
-       screens. Because this stylesheet uses relative units
-       everywhere, everything scales nicely. */
-    font-size: 1.25em;
-  }
-}
+
 
 body {
   /* space for sticky footer */
@@ -423,7 +353,7 @@ body {
 .header {
 	position: absolute;
 	width: 100%;
-  padding-top: 1.5rem;
+  padding: 1.5em;
 }
 
 .home-title p{
@@ -439,6 +369,14 @@ body {
 	height:60vh;
 }
 
+
+.branding {
+	line-height: 3rem;
+	margin-bottom: 0;
+	white-space: nowrap;
+	text-align: left;
+}
+
 .branding a {
   text-align: center;
 	font-family: 'Larsseit-Medium', Helvetica, Arial, sans-serif;
@@ -449,22 +387,10 @@ body {
 	letter-spacing: .25rem;
 }
 
-
-@media all and (min-width: 56em) {
-  .header {
-    padding: 1.5rem;
-  }
-  .branding {
-    line-height: 3rem;
-    margin-bottom: 0;
-    white-space: nowrap;
-    text-align: left;
-  }
-  .navigation {
-    vertical-align: baseline;
-    width: 50%;
-		margin:auto;
-  }
+.navigation {
+	vertical-align: baseline;
+	width: 50%;
+	margin:auto;
 }
 
 /* -----  3.2 Menu  --------------------------------------------------------- */
@@ -494,11 +420,6 @@ body {
   border-bottom: 2px solid #337ab7;
 }
 
-@media all and (min-width: 56em) {
-  .menu {
-    text-align: right;
-  }
-}
 
 /* -----  3.3 Sticky Footer  ------------------------------------------------ */
 
@@ -599,10 +520,8 @@ body {
 }
 
 .projectDetails p{
-	font-family: 'Larsseit-Medium', Helvetica, Arial, sans-serif;
 	font-size: 1.25em;
-  font-weight: 700;
-	line-height: 1.8rem;
+	line-height: 2rem;
 	padding: 0 5em 0 0;
 	text-align: left;
 	max-width: 100%;
@@ -683,32 +602,24 @@ body {
 	margin: 0 0 7em;
 }
 
+
+/* =====  5 Media Queries  =========================== */
+
+@media all and (pointer: coarse) {
+  .pagination-item {
+    /* On touch-devices we increase prev/next buttons */
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
 @media all and (max-width: 73.33em) {
 	.primaryGallery {
     padding: 0 4em 0 0;
 	}
-
-	/*.projectDetails{
-		padding: 0 0 3em;
-	}*/
-
 	.projectHeader{
 		width: auto;
 	}
-
-	/*.projectProcess .col-2{
-		float: none;
-		width:100%;
-	}
-
-	.processStatement{
-		position: static;
-		top:0;
-		left:0;
-		transform:none;
-		padding:7em 0;
-	}*/
-
 	.projectThumb{
 		right: 0;
 		width: 400px;
@@ -716,9 +627,51 @@ body {
 	}
 }
 
-@media all and (max-width: 45em) {
+@media all and (max-width: 62.5em) {
+  .col-4,
+	.col-3 {
+    width: 33.33%;
+  }
+	.pagination {
+		margin-bottom: 1.5rem;
+	}
+	.pagination-item {
+		position: relative;
+	}
+	.pagination-item.left {
+		float: left;
+	}
+	.pagination-item.right {
+		float: right;
+	}
+}
+
+
+@media all and (min-width: 38em) {
+  .showcase-item {
+    width: 33.33%;
+  }
+  .showcase-item:nth-last-child(3n+2):first-child,
+  .showcase-item:nth-last-child(3n+2):first-child + .showcase-item, .showcase-item:nth-last-child(3n+1):first-child,
+  .showcase-item:nth-last-child(3n+1):first-child ~ .showcase-item:nth-child(-n+4) {
+    /* x = items
+       When x % 3 = 2, select first and second item:
+       When x % 3 = 1, select first 4 items: */
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 48.33em) {
 	figcaption{
 		font-size: 1em;
+	}
+	.branding {
+		text-align: center;
+	}
+	.col-4,
+	.col-3,
+	.col-2 {
+			width: 100%;
 	}
 	.gallery{
 		padding: 0 10% 5em;
@@ -730,6 +683,10 @@ body {
 		position: static;
 		top:0;
 	}
+	.projectHeader {
+    padding: 7em 10% 3em;
+		height:auto;
+	}
 	.projectDetails p{
 		font-family: 'Larsseit-Light';
 		font-weight: normal;
@@ -737,9 +694,79 @@ body {
 		padding: 0;
 		text-align: center;
 	}
+	.projectPress{
+		padding: 3em 0;
+		text-align: right;
+	}
 	.projectProcess{
 		padding:3em 0;
 	}
 	.projectProcess img {
     padding: 5em 0 0;
+	}
+	.projectThumb{
+		top:5em;
+		width: 50%;
+    height: auto;
+	}
+	.projectTitle{
+		margin: 0 0 5em;
+	}
+}
+
+@media all and (max-width: 30em) {
+  html {
+    /* We decrease the font-size a little-bit for tiny
+       screens. Because this stylesheet uses relative units
+       everywhere, everything scales nicely. */
+    font-size: 1.25em;
+  }
+	.branding a{
+		font-size: 1em;
+	}
+	.header{
+		padding: 1em;
+	}
+	.projectDetails{
+		padding: 5em 5%;
+	}
+	.projectHeader {
+    padding: 5em 5% 1em;
+	}
+	.projectInfo{
+		padding: 0 5%;
+	}
+	.projectPress{
+		text-align: left;
+	}
+	.projectPress li{
+		margin: 1em 0;
+	}
+	.projectSummary{
+		font-size: 2em;
+	}
+	.projectThumb{
+		display: none;
+	}
+	.projectTitle{
+		margin: 0 0 2em;
+	}
+}
+
+@media (any-hover: none) {
+  .showcase-caption {
+    /* The media query, enclosing these rules matches only
+       touch-screen devices that do not support hover due
+       to the lack of a pointing device like a mouse.
+       It does not work in all mobile browsers, but
+       progressively enhances the experience on supported
+       devices. Tested in Safari (iOS) 9.3 */
+    opacity: 1.0;
+    /* Reset will-change property to keep it from eating
+       up unneccessary resources on touch-only devices */
+    will-change: auto;
+  }
+  .showcase-title {
+    font-size: .85em;
+  }
 }
