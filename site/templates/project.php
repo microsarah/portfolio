@@ -39,28 +39,38 @@
 
     <!-- =====  Process Image + Caption  ===========================  -->
     <section class="projectDetails">
-      <?php if($image = $page->image('process.jpg')): ?>
+
+      <?php $images = $page->images()->filterBy('filename', '*=', 'process');
+      if($images->count() > 0): ?>
       <div class="projectProcess cf">
         <div class="col-2">
             <p><?= $page->process() ?></p>
         </div>
         <div class="col-2">
+          <?php foreach($images as $image): ?>
           <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
+          <?php endforeach ?>
         </div>
       </div>
       <?php endif ?>
 
-      <!-- =====  Journey Caption + Image  ===========================  -->
+      <!-- =====  First Compare Caption + Image  ===========================  -->
       <div class="cf projectJourney">
         <p><?= $page->journey() ?></p>
-        <?php if($image = $page->image('compare-old.jpg')): ?>
+        <?php $images = $page->images()->filterBy('filename', '*=', 'compare-1');
+        if($images->count() > 0): ?>
           <figure class="col-2">
+            <?php foreach($images as $image): ?>
             <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
+            <?php endforeach ?>
           </figure>
         <?php endif ?>
-        <?php if($image = $page->image('compare-new.jpg')): ?>
+        <?php $images = $page->images()->filterBy('filename', '*=', 'compare-2');
+        if($images->count() > 0): ?>
           <figure class="col-2">
+            <?php foreach($images as $image): ?>
             <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
+            <?php endforeach ?>
           </figure>
         <?php endif ?>
       </div>
@@ -109,7 +119,28 @@
         <?php endif ?>
       </div>
       </section>
-    <?php snippet('prevnext') ?>
-  </main>
 
+
+    <!-- =====  Second Compare Caption + Image  ===========================  -->
+    <div class="cf projectJourney">
+      <p><?= $page->compare() ?></p>
+      <?php $images = $page->images()->filterBy('filename', '*=', 'compare-3');
+      if($images->count() > 0): ?>
+        <figure class="col-2">
+          <?php foreach($images as $image): ?>
+          <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
+          <?php endforeach ?>
+        </figure>
+      <?php endif ?>
+      <?php $images = $page->images()->filterBy('filename', '*=', 'compare-4');
+      if($images->count() > 0): ?>
+        <figure class="col-2">
+          <?php foreach($images as $image): ?>
+          <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
+          <?php endforeach ?>
+        </figure>
+      <?php endif ?>
+    </div>
+  </main>
+  <?php snippet('prevnext') ?>
 <?php snippet('footer') ?>

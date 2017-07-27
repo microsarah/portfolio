@@ -152,8 +152,7 @@ figure{
 }
 
 figcaption {
-  font-size: .75rem;
-  line-height: 1.5rem;
+  letter-spacing: .05em;
 	padding: 4em 0;
 	text-align: center;
 }
@@ -506,7 +505,7 @@ body {
 	position: relative;
 	max-width: 1200px;
 	margin: auto;
-	padding: 7em 0;
+	padding: 7em 0 4em;
 }
 
 .projectProcess img{
@@ -528,8 +527,11 @@ body {
 }
 
 .projectJourney p{
-	margin:3em auto 5em;
+	font-size: 1.25em;
+	margin:5em auto 3em;
 	text-align: center;
+	padding: 0;
+	max-width: 100%;
 }
 
 .projectHero{
@@ -592,7 +594,7 @@ body {
 .projectThumb img{
 	height:100%;
 	width:100%;
-	opacity: 0.8;
+	opacity: 0.75;
 }
 
 .projectTitle{
@@ -620,11 +622,12 @@ body {
 	.projectHeader{
 		width: auto;
 	}
-	.projectThumb{
+	/*.projectThumb{
+		top: 3em;
 		right: 0;
-		width: 400px;
-		height: 400px;
-	}
+		width: 500px;
+		height: auto;
+	}*/
 }
 
 @media all and (max-width: 62.5em) {
@@ -684,15 +687,19 @@ body {
 		top:0;
 	}
 	.projectHeader {
-    padding: 7em 10% 3em;
+    padding: 7em 10% 2em;
 		height:auto;
 	}
+	.projectInfo{
+		padding:3em 10%;
+	}
 	.projectDetails p{
-		font-family: 'Larsseit-Light';
-		font-weight: normal;
 		font-size: 1em;
 		padding: 0;
 		text-align: center;
+	}
+	.projectJourney p{
+		font-size: 1em;
 	}
 	.projectPress{
 		padding: 3em 0;
@@ -705,9 +712,16 @@ body {
     padding: 5em 0 0;
 	}
 	.projectThumb{
-		top:5em;
-		width: 50%;
+		position: static;
+		top:0;
+		width: 90%;
     height: auto;
+		margin:auto;
+	}
+	.projectThumb img{
+		height:100%;
+		width:100%;
+		opacity: 1;
 	}
 	.projectTitle{
 		margin: 0 0 5em;
@@ -744,9 +758,6 @@ body {
 	}
 	.projectSummary{
 		font-size: 2em;
-	}
-	.projectThumb{
-		display: none;
 	}
 	.projectTitle{
 		margin: 0 0 2em;
