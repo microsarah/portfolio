@@ -378,20 +378,25 @@ body {
 
 
 .branding {
-	line-height: 3rem;
-	margin-bottom: 0;
+	/*line-height: 3rem;*/
 	white-space: nowrap;
-	text-align: left;
+	width: 2em;
+	height: 2em;
+	margin: 0;
+	border: 2px solid #337ab7;
+  padding: .25em;
+  transform: rotate(-45deg);
 }
 
 .branding a {
-  text-align: center;
 	font-family: 'Larsseit-Medium', Helvetica, Arial, sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.95rem;
-  margin-bottom: .45rem;
+  font-size: 1rem;
+  line-height: .875rem;
+	margin: .275em 0 0 -.1em;
 	border-bottom: 0;
-	letter-spacing: .25rem;
+	letter-spacing: .05rem;
+	transform: rotate(45deg);
+	display: block;
 }
 
 .navigation {

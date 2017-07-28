@@ -15,11 +15,22 @@ Role: web design, branding
 ----
 
 Text:
+I was delighted to design the identity and website for <a href="http://www.katilondon.com/" target="blank">Kati London</a> + <a href="http://www.katecrawford.net/" target="blank">Kate Crawford</a>'s Listening Machines: a one-day summit 'to address the new era of consumer listening devices.' The summit was supported by <a href="http://nytlabs.com/" target="blank">The New York Times Research & Development group</a> and <a href="https://www.microsoft.com/en-us/research/" target="blank">Microsoft Research</a>.
 
-I'd always be humbled to work on something that comes from the minds of <a href="http://www.katilondon.com/" target="blank">Kati London</a> + <a href="http://www.katecrawford.net/" target="blank">Kate Crawford</a>, so I was delighted to design the identity and website for Listening Machines; a "special one-day summit in New York City to address the new era of consumer listening devices."
 <a href="http://lms.fuselabs.org/" target="blank">lms.fuselabs.org</a>
 
-I incorporated images of various 'listening machines' used in history in contrast with the contemporary subject matter of the conference to draw attention to the fact that while we used to create machines we used to listen in different ways, we now create machines that listen to us. Machines of the past were large, bulky, and cumbersome– but machines of the present are subtle and oftentimes obscure enough we don't even recognize that they're recording audio of us.
+----
+
+Press:
+<h3>select press</h3>
+<ul>
+<li><a href="https://www.theatlantic.com/technology/archive/2015/06/listening-machines/396179/" target="blank">The Atlantic</a></li>
+</ul>
+
+----
+
+Process:
+I incorporated images of historical listening machines in contrast with the contemporary subject matter of the conference. Listening machines of the past were bulky, cumbersome, and built to assist us; listen machines of the present are tiny, subtle, and built to observe to us.
 
 ----
 
