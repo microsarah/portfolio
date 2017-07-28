@@ -676,6 +676,9 @@ body {
 	.col-2 {
 			width: 100%;
 	}
+	.col-2 + .col-2{
+		margin: 3em 0 0;
+	}
 	.gallery{
 		padding: 0 10% 5em;
 	}
@@ -716,7 +719,7 @@ body {
 		top:0;
 		width: 90%;
     height: auto;
-		margin:auto;
+		margin: 0 auto 2em;
 	}
 	.projectThumb img{
 		height:100%;
@@ -738,11 +741,14 @@ body {
 	.branding a{
 		font-size: 1em;
 	}
+	.col-2 + .col-2{
+		margin: 1em 0 0;
+	}
 	.header{
 		padding: 1em;
 	}
 	.projectDetails{
-		padding: 5em 5%;
+		padding: 0 5% 5em;
 	}
 	.projectHeader {
     padding: 5em 5% 1em;
@@ -755,6 +761,9 @@ body {
 	}
 	.projectPress li{
 		margin: 1em 0;
+	}
+	.projectProcess {
+    padding: 3em 0 0;
 	}
 	.projectSummary{
 		font-size: 2em;
