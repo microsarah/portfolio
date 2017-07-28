@@ -1,11 +1,32 @@
-Title: About
+Projectnum: &#9671;
 
 ----
 
-Intro: Hey, I'm Sarah!
+Title: About Me!
 
 ----
 
-Text: I'm a designer, developer and artist working out of my sunny Brooklyn kitchen. Lover of leafy greens, rare steak, strong coffee, a certain Black Flag album on vinyl, and a cold swim after a long hike. If I haven't told you enough facts, there's a pretty embarrassing video of me skydiving just a quick Google away.
+Summary: Lover of leafy greens, strong coffee, a certain Black Flag album on vinyl, and a cold swim after a long hike.
+
+----
+
+Text:
+
+If I haven't told you enough facts, there's a pretty embarrassing video of me skydiving just a quick Google away.
 
 From here you can check out my cv and projects. You're watching the skydiving video tho, aren't you? -_-
+
+
+----
+
+Press:
+<h3>Say hello!</h3>
+<ul>
+<li>sarah.hallacher@gmail.com</li>
+<li><a href="https://workingnotworking.com/microsarah" target="blank">working not working</a></li>
+<li><a href="http://github.com/microsarah" target="blank">github</a></li>
+<li><a href="http://instagram.com/microsarah" target="blank">instagram</a></li>
+<li><a href="http://twitter.com/microsarah" target="blank">twitter</a></li>
+</ul>
+
+----

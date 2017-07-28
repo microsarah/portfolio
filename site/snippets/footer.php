@@ -8,7 +8,7 @@
       ?></p>
     </div>
   </footer>
-  <a href="#top" class="top smoothScroll">&#8593;</a>
+  <a class="top smoothScroll" href="#top"><?= (new Asset("assets/images/arrow-top.svg"))->content() ?></a>
 </body>
 <script type="text/javascript">
 $(window).scroll(function(){

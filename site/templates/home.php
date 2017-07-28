@@ -18,8 +18,10 @@
         <h4 class="projectNum"><?= $page->projectNum() ?></h4>
         <h1 class="projectTitle"><?= $page->title()->html() ?></h1>
         <h2 class="projectSummary"><?= $page->summary() ?></h2>
-        <a href="http://sarahmak.es/projects">view work</a>
-        <a href="http://sarahmak.es/an-internet-bio">about me</a>
+        <nav class="menu">
+          <a class="cta" href="http://sarahmak.es/projects">work</a>
+          <a class="cta" href="http://sarahmak.es/an-internet-bio">about</a>
+        </nav>
     </header>
     <div class="projectThumb">
       <?php $images = $page->images()->filterBy('filename', '*=', 'project-thumb');
@@ -39,7 +41,7 @@
     <section class="projectsSection" id="projects">
 
       <div class="wrap wide">
-        <h2 class="projects-title">Recent Work</h2>
+        <h2 class="projects-title">Recent Projects</h2>
         <?php snippet('showcase', ['limit' => 3]) ?>
         <p class="projectsSection-more"><a href="<?= page('projects')->url() ?>" class="btn">view all</a></p>
       </div>

@@ -15,13 +15,14 @@
 
   3 Site Layout
   3.1 Header
-  3.2 Menu
+  3.2 Menu + Buttons
   3.3 Sticky Footer
   3.4 Main Content
 
   4 Template-specific Components
   4.1 Homepage
-  4.2 Project
+  4.2 About
+	4.3 Project
 
   5 Media Queries
 
@@ -213,12 +214,11 @@ section{
 	position: fixed;
 	top: 50%;
 	margin-top: -.875rem;
-	border-bottom: none;
 }
 
 .pagination-item:hover, .pagination-item:focus {
-  background: #261e66;
-  color: #fffff8;
+  /*background: #261e66;*/
+  color: #337ab7;
 }
 
 .pagination-item svg {
@@ -351,8 +351,23 @@ body {
 	display: none;
 	position: fixed;
 	z-index: 999;
+	width: 1.75rem;
+	height: 1.75rem;
+	color: #261e66;
+	border-bottom: 0;
 	right: 1.5em;
 	bottom: 1.5em;
+}
+
+.top:hover, .top:focus {
+  color: #337ab7;
+}
+
+.top svg {
+  display: block;
+  margin: 0 -6px 0 0;
+  width: 12px;
+  height: 24px;
 }
 
 /* ----- 3.1  Header  ------------------------------------------------------- */
@@ -363,29 +378,24 @@ body {
   padding: 1.5em;
 }
 
-/*.home-title p{
-		font-size: 4.5vw;
-    line-height: 4rem;
-    width: 10em;
-    position: fixed;
-    top: 40vh;
-    left: 22%;
-}*/
-
 .intro-text{
 	height:60vh;
 }
 
-
 .branding {
-	/*line-height: 3rem;*/
+	position: fixed;
 	white-space: nowrap;
 	width: 2em;
 	height: 2em;
-	margin: 0;
-	border: 2px solid #337ab7;
+	top:2em;
+	left: 2.5em;
+	border: 2px solid #261e66;
   padding: .25em;
   transform: rotate(-45deg);
+}
+
+.branding:hover {
+	border: 2px solid #337ab7;
 }
 
 .branding a {
@@ -405,13 +415,26 @@ body {
 	margin:auto;
 }
 
-/* -----  3.2 Menu  --------------------------------------------------------- */
+/* -----  3.2 Menu + Buttons  --------------------------------------------------------- */
+
+.cta{
+	display: inline-block;
+	width: 4.5em;
+	font-size: 1em;
+	border-bottom:none;
+	border: 1px solid #261e66;
+	padding: .75em;
+	margin: 0 1em;
+}
+.cta:hover{
+	border: 1px solid #337ab7;
+}
 
 .menu {
   text-align: center;
-  font-weight: 500;
+  margin: 5em 0 0;
 }
-
+/*
 .menu-item {
 	width:33.33%;
   display: block;
@@ -430,25 +453,10 @@ body {
 
 .menu-item.is-active a {
   border-bottom: 2px solid #337ab7;
-}
+}*/
 
 
 /* -----  3.3 Sticky Footer  ------------------------------------------------ */
-
-@keyframes pulsing-heart {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.2);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
 .footer {
   position: absolute;
@@ -474,13 +482,6 @@ body {
 
 /* -----  4.1 Homepage  ----------------------------------------------------- */
 
-
-/*.home{
-	background: url(../images/home.jpg) no-repeat 95% 10%;
-	background-size:40%;
-	z-index: -2;
-}*/
-
 .projectsSection {
   /*margin-top: 20vh;*/
   padding-top: .75em;
@@ -497,7 +498,53 @@ body {
   text-align: center;
 }
 
-/* ----- 4.2 Project  -------------------------------------------------- */
+/* ----- 4.2 About  -------------------------------------------------- */
+
+.about{
+	margin:2em 0 6em;
+}
+
+.about li{
+	margin: 1em 0;
+}
+.cv{
+	width:80%;
+	max-width: 1400px;
+	margin:auto;
+}
+
+
+.press .col-3:nth-of-type(2){
+	text-align: center;
+}
+.press .col-3:nth-of-type(3){
+	text-align: right;
+}
+.recognition .col-2:first-of-type{
+	padding-top:5em;
+}
+
+.recognition .col-2:last-of-type{
+	text-align: right;
+	padding-top:13em;
+}
+
+.skills .col-3:nth-of-type(2){
+	text-align: center;
+}
+.skills .col-3:nth-of-type(3){
+	text-align: right;
+}
+
+.teaching {
+	text-align: center;
+}
+
+/*.teaching .col-2:last-of-type{
+	text-align: right;
+}*/
+
+/* ----- 4.3 Project  -------------------------------------------------- */
 
 .gallery{
 	max-width:1400px;
@@ -614,7 +661,7 @@ body {
 	font-size:.8em;
 	text-align: center;
 	font-family: 'Larsseit-Light';
-	margin: 0 0 7em;
+	margin: 0 0 5em;
 }
 
 
@@ -635,12 +682,6 @@ body {
 	.projectHeader{
 		width: auto;
 	}
-	/*.projectThumb{
-		top: 3em;
-		right: 0;
-		width: 500px;
-		height: auto;
-	}*/
 }
 
 @media all and (max-width: 62.5em) {
@@ -648,17 +689,11 @@ body {
 	.col-3 {
     width: 33.33%;
   }
-	.pagination {
-		margin-bottom: 1.5rem;
-	}
-	.pagination-item {
-		position: relative;
-	}
 	.pagination-item.left {
-		float: left;
+		left: .25rem;
 	}
 	.pagination-item.right {
-		float: right;
+		right: .25rem;
 	}
 }
 
@@ -682,7 +717,10 @@ body {
 		font-size: 1em;
 	}
 	.branding {
-		text-align: center;
+		position: static;
+		top:0;
+		left:0;
+		margin:0 auto 3em;
 	}
 	.col-4,
 	.col-3,
@@ -759,6 +797,19 @@ body {
 	}
 	.header{
 		padding: 1em;
+	}
+	.pagination-item {
+	  position: absolute;
+		top:95%;
+	  bottom: 5em;
+	  margin: auto;
+	}
+
+	.pagination-item.left {
+		left: 2.25rem;
+	}
+	.pagination-item.right {
+		right: 2.25rem;
 	}
 	.projectDetails{
 		padding: 0 5% 5em;
