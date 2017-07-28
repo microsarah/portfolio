@@ -153,8 +153,11 @@ figure{
 
 figcaption {
   letter-spacing: .05em;
+	line-height: 1.5em;
 	padding: 4em 0;
 	text-align: center;
+	max-width: 36em;
+	margin:auto;
 }
 
 /* =====  2 Layout Helpers & Reusable Components  =========================== */
@@ -185,6 +188,11 @@ section{
 
 .col-2{
 	width:50%;
+}
+
+.col-1{
+	width: 90%;
+	margin: auto;
 }
 
 .col-4,
@@ -355,14 +363,14 @@ body {
   padding: 1.5em;
 }
 
-.home-title p{
+/*.home-title p{
 		font-size: 4.5vw;
     line-height: 4rem;
     width: 10em;
     position: fixed;
     top: 40vh;
     left: 22%;
-}
+}*/
 
 .intro-text{
 	height:60vh;
@@ -462,16 +470,16 @@ body {
 /* -----  4.1 Homepage  ----------------------------------------------------- */
 
 
-.home{
+/*.home{
 	background: url(../images/home.jpg) no-repeat 95% 10%;
 	background-size:40%;
 	z-index: -2;
-}
+}*/
 
-.projects-section {
-  margin-top: 20vh;
-  padding-top: .75rem;
-  padding-bottom: .75rem;
+.projectsSection {
+  /*margin-top: 20vh;*/
+  padding-top: .75em;
+  padding-bottom: .75em;
 }
 
 .projects-title{
@@ -480,7 +488,7 @@ body {
 	font-style: italic;
 }
 
-.projects-section-more {
+.projectsSection-more {
   text-align: center;
 }
 
@@ -560,7 +568,7 @@ body {
 	font-size: .8em;
 	width:1.5em;
 	height:1.5em;
-	line-height: 1.4em;
+	line-height: 1.5em;
 	text-align: center;
 	margin:auto;
 	border:1px solid black;

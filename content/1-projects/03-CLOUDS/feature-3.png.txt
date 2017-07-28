@@ -1,0 +1,6 @@
+
+Title: CLOUDS Visual System
+
+----
+
+Caption: A visual system is an interactive visual that the user can explore while they listen to the speaker discuss the current topic.

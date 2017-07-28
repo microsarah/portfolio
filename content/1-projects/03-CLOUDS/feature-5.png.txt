@@ -1,0 +1,6 @@
+
+Title: CLOUDS Artist
+
+----
+
+Caption: In research mode, the user is able to generate a story based on a single concept, artist, or visual.

@@ -55,40 +55,64 @@
       <?php endif ?>
 
       <!-- =====  First Compare Caption + Image  ===========================  -->
-      <div class="cf projectJourney">
-        <p><?= $page->journey() ?></p>
-        <?php $images = $page->images()->filterBy('filename', '*=', 'compare-1');
+      <?php $images = $page->images()->filterBy('filename', '*=', 'compare-');
         if($images->count() > 0): ?>
-          <figure class="col-2">
-            <?php foreach($images as $image): ?>
-            <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
-            <?php endforeach ?>
-          </figure>
-        <?php endif ?>
-        <?php $images = $page->images()->filterBy('filename', '*=', 'compare-2');
-        if($images->count() > 0): ?>
-          <figure class="col-2">
-            <?php foreach($images as $image): ?>
-            <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
-            <?php endforeach ?>
-          </figure>
-        <?php endif ?>
-      </div>
-    </section>
-
+        <div class="cf projectJourney">
+          <p><?= $page->journey() ?></p>
+          <?php $images = $page->images()->filterBy('filename', '*=', 'compare-1');
+          if($images->count() > 0): ?>
+            <figure class="col-2">
+              <?php foreach($images as $image): ?>
+              <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
+              <?php endforeach ?>
+            </figure>
+          <?php endif ?>
+          <?php $images = $page->images()->filterBy('filename', '*=', 'compare-2');
+          if($images->count() > 0): ?>
+            <figure class="col-2">
+              <?php foreach($images as $image): ?>
+              <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
+              <?php endforeach ?>
+            </figure>
+          <?php endif ?>
+        </div>
+      </section>
+    <?php endif ?>
       <!-- =====  Gallery  ===========================  -->
-    <section class="gallery">
-      <div class="cf">
-      <?php $images = $page->images()->filterBy('filename', '*=', 'gallery-1');
-        if($images->count() > 0): ?>
-        <?php foreach($images as $image): ?>
-          <figure class="col-2 primaryGallery">
-            <figcaption><?php echo html($image->caption()) ?></figcaption>
-        		<img src="<?php echo $image->url() ?>" alt="<?php echo $image->title() ?>">
-          </figure>
-        <?php endforeach ?>
+    <?php $images = $page->images()->filterBy('filename', '*=', 'gallery-');
+      if($images->count() > 0): ?>
+      <section class="gallery">
+        <div class="cf">
+        <?php $images = $page->images()->filterBy('filename', '*=', 'gallery-1');
+          if($images->count() > 0): ?>
+          <?php foreach($images as $image): ?>
+            <figure class="col-2 primaryGallery">
+              <figcaption><?php echo html($image->caption()) ?></figcaption>
+          		<img src="<?php echo $image->url() ?>" alt="<?php echo $image->title() ?>">
+            </figure>
+          <?php endforeach ?>
+          <?php endif ?>
+          <?php $images = $page->images()->filterBy('filename', '*=', 'gallery-2');
+            if($images->count() > 0): ?>
+            <?php foreach($images as $image): ?>
+              <figure class="col-2 secondaryGallery">
+                <figcaption><?php echo html($image->caption()) ?></figcaption>
+                <img src="<?php echo $image->url() ?>" alt="<?php echo $image->title() ?>">
+              </figure>
+            <?php endforeach ?>
+            <?php endif ?>
+        </div>
+        <div class="cf">
+        <?php $images = $page->images()->filterBy('filename', '*=', 'gallery-3');
+          if($images->count() > 0): ?>
+          <?php foreach($images as $image): ?>
+            <figure class="col-2 primaryGallery">
+              <figcaption><?php echo html($image->caption()) ?></figcaption>
+              <img src="<?php echo $image->url() ?>" alt="<?php echo $image->title() ?>">
+            </figure>
+          <?php endforeach ?>
         <?php endif ?>
-        <?php $images = $page->images()->filterBy('filename', '*=', 'gallery-2');
+        <?php $images = $page->images()->filterBy('filename', '*=', 'gallery-4');
           if($images->count() > 0): ?>
           <?php foreach($images as $image): ?>
             <figure class="col-2 secondaryGallery">
@@ -97,48 +121,44 @@
             </figure>
           <?php endforeach ?>
           <?php endif ?>
-      </div>
-      <div class="cf">
-      <?php $images = $page->images()->filterBy('filename', '*=', 'gallery-3');
-        if($images->count() > 0): ?>
-        <?php foreach($images as $image): ?>
-          <figure class="col-2 primaryGallery">
-            <figcaption><?php echo html($image->caption()) ?></figcaption>
-            <img src="<?php echo $image->url() ?>" alt="<?php echo $image->title() ?>">
-          </figure>
-        <?php endforeach ?>
+        </div>
+        </section>
       <?php endif ?>
-      <?php $images = $page->images()->filterBy('filename', '*=', 'gallery-4');
-        if($images->count() > 0): ?>
-        <?php foreach($images as $image): ?>
-          <figure class="col-2 secondaryGallery">
-            <figcaption><?php echo html($image->caption()) ?></figcaption>
-            <img src="<?php echo $image->url() ?>" alt="<?php echo $image->title() ?>">
-          </figure>
-        <?php endforeach ?>
-        <?php endif ?>
-      </div>
-      </section>
-
 
     <!-- =====  Second Compare Caption + Image  ===========================  -->
+    <?php $images = $page->images()->filterBy('filename', '*=', 'compare-');
+    if($images->count() > 2): ?>
+      <div class="cf projectJourney">
+        <p><?= $page->compare() ?></p>
+        <?php $images = $page->images()->filterBy('filename', '*=', 'compare-3');
+        if($images->count() > 0): ?>
+          <figure class="col-2">
+            <?php foreach($images as $image): ?>
+            <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
+            <?php endforeach ?>
+          </figure>
+        <?php endif ?>
+        <?php $images = $page->images()->filterBy('filename', '*=', 'compare-4');
+        if($images->count() > 0): ?>
+          <figure class="col-2">
+            <?php foreach($images as $image): ?>
+            <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
+            <?php endforeach ?>
+          </figure>
+        <?php endif ?>
+      </div>
+    <?php endif ?>
+
+    <!-- =====  Feature Images  ===========================  -->
     <div class="cf projectJourney">
-      <p><?= $page->compare() ?></p>
-      <?php $images = $page->images()->filterBy('filename', '*=', 'compare-3');
+      <?php $images = $page->images()->filterBy('filename', '*=', 'feature-');
       if($images->count() > 0): ?>
-        <figure class="col-2">
-          <?php foreach($images as $image): ?>
+        <?php foreach($images as $image): ?>
+        <figure class="col-1">
+          <figcaption><?php echo html($image->caption()) ?></figcaption>
           <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
-          <?php endforeach ?>
         </figure>
-      <?php endif ?>
-      <?php $images = $page->images()->filterBy('filename', '*=', 'compare-4');
-      if($images->count() > 0): ?>
-        <figure class="col-2">
-          <?php foreach($images as $image): ?>
-          <img src="<?php echo $image->url() ?>" alt="<?= $page->title()->html() ?>" />
-          <?php endforeach ?>
-        </figure>
+        <?php endforeach ?>
       <?php endif ?>
     </div>
   </main>

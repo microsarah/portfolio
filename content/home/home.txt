@@ -1,9 +1,9 @@
-Title: Home
+Projectnum: ^
 
 ----
 
-Text:
+Title: Hello!
 
 ----
 
-Intro: sarah hallacher is a designer & artist who codes.
+Summary: Sarah K Hallacher is a multi-disciplinary designer in Brooklyn, NY.

@@ -1,0 +1,6 @@
+
+Title: CLOUDS Story Engine
+
+----
+
+Caption: To begin the experience, the user chooses a question to explore. The film's algorithm or 'story engine' then creates a story by selecting a series of interview clips relevant to the user's selection. The user may alter their story by selecting a new question, or by choosing to research a specific topic, person, or visual system.
