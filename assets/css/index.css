@@ -22,7 +22,8 @@
   4 Template-specific Components
   4.1 Homepage
   4.2 About
-	4.3 Project
+	4.3 Projects
+	4.4 Project
 
   5 Media Queries
 
@@ -131,10 +132,14 @@ p {
 a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px dotted #337ab7;
+  border-bottom: 1px solid #261e66;
 }
 
 a:hover, a:focus, a:active {
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
   color: #337ab7;
 }
 
@@ -217,7 +222,10 @@ section{
 }
 
 .pagination-item:hover, .pagination-item:focus {
-  /*background: #261e66;*/
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
   color: #337ab7;
 }
 
@@ -254,19 +262,38 @@ section{
 
 .showcase {
   position: relative;
+	width:80%;
+	max-width: 1400px;
+	margin:auto;
 }
 
-.showcase-item {
+.showcaseItem {
   list-style: none;
   margin-bottom: .75rem;
   position: relative;
 }
 
-.showcase-item a{
+.showcaseItem{
+	padding:3em;
+}
+
+.showcaseItem:nth-last-child(3n+2):first-child{
+	border:10px solid red;
+}
+
+.showcaseItem:nth-last-child(3n+2):first-child,
+.showcaseItem:nth-last-child(3n+2):first-child + .showcaseItem,
+.showcaseItem:nth-last-child(3n+1):first-child,   /*------------------------------- 1st image */
+.showcaseItem:nth-last-child(3n+1):first-child ~ .showcaseItem:nth-child(-n+4) /*-- 2nd - 4th image */
+{
+	width: 50%;
+}
+
+.showcaseItem a{
 	z-index: 3;
 }
 
-.showcase-link {
+.showcaseLink {
   display: block;
   position: relative;
   padding-top: 100%;
@@ -274,43 +301,58 @@ section{
   border-bottom: 0;
 }
 
-.showcase-caption {
-  position: absolute;
+.showcaseOverlay{
+	position: absolute;
 	top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: #261e66;
-  color: #eafded;
-  letter-spacing: .05em;
-  opacity: 0;
-  -webkit-transition: .25s opacity;
-  transition: .25s opacity;
-  will-change: opacity;
+  background: #5448b3;
+	opacity:.45;
+	-webkit-transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-o-transition: opacity .25s ease-in-out;
+	transition: opacity .25s ease-in-out;
 }
 
-.showcase-title {
-  margin-bottom: 0;
+.showcaseCaption {
+	position: absolute;
+  top: -3em;
   text-align: center;
   width: 100%;
   padding: 0 1.5rem;
-  /* Vertically center the caption */
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
-.showcase-image {
+.showcaseTitle {
+  text-align: center;
+  width: 100%;
+  padding: 0 1.5rem;
+	margin:0;
+}
+
+
+.showcaseImage {
   display: block;
   position: absolute;
   left: 0;
   top: 0;
+	filter: grayscale(1) brightness(1.05);
+	-webkit-transition: filter .25s ease-in-out;
+	-moz-transition: filter .25s ease-in-out;
+	-o-transition: filter .25s ease-in-out;
+	transition: filter .25s ease-in-out;
 }
 
-.showcase-link:hover .showcase-caption,
-.showcase-link:focus .showcase-caption {
-  opacity: 1;
+.showcaseItem:hover{
+	color: #337ab7;
+	cursor: pointer;
+}
+.showcaseItem:hover .showcaseOverlay{
+	opacity: 0;
+}
+
+.showcaseItem:hover .showcaseImage{
+	filter: none;
 }
 
 
@@ -361,6 +403,10 @@ body {
 
 .top:hover, .top:focus {
   color: #337ab7;
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
 }
 
 .top svg {
@@ -396,6 +442,10 @@ body {
 
 .branding:hover {
 	border: 2px solid #337ab7;
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
 }
 
 .branding a {
@@ -428,6 +478,10 @@ body {
 }
 .cta:hover{
 	border: 1px solid #337ab7;
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
 }
 
 .menu {
@@ -513,7 +567,6 @@ body {
 	margin:auto;
 }
 
-
 .press .col-3:nth-of-type(2){
 	text-align: center;
 }
@@ -540,11 +593,21 @@ body {
 	text-align: center;
 }
 
-/*.teaching .col-2:last-of-type{
-	text-align: right;
-}*/
+/* ----- 4.3 Projects  -------------------------------------------------- */
 
-/* ----- 4.3 Project  -------------------------------------------------- */
+.projectsHeader{
+	padding:7em 0 1em;
+	text-align: center !important;
+}
+
+.projectsSummary{
+	font-size: 3em;
+	line-height: 1.5em;
+	text-align: center;
+	margin:-1em 0 1.5em;
+}
+
+/* ----- 4.4 Project  -------------------------------------------------- */
 
 .gallery{
 	max-width:1400px;
@@ -675,6 +738,19 @@ body {
   }
 }
 
+@media all and (max-width: 83.375em) {
+	.showcase{
+		width:100%;
+		padding: 3em 10% 5em;
+	}
+	.showcaseItem{
+		padding: 2em 2em 5em;
+	}
+	.showcaseCaption {
+	  top: -5em;
+	}
+}
+
 @media all and (max-width: 73.33em) {
 	.primaryGallery {
     padding: 0 4em 0 0;
@@ -682,12 +758,14 @@ body {
 	.projectHeader{
 		width: auto;
 	}
+	.showcaseItem{
+		padding: 1em 1em 5em;
+	}
 }
 
 @media all and (max-width: 62.5em) {
-  .col-4,
 	.col-3 {
-    width: 33.33%;
+    width: 50%;
   }
 	.pagination-item.left {
 		left: .25rem;
@@ -695,21 +773,6 @@ body {
 	.pagination-item.right {
 		right: .25rem;
 	}
-}
-
-
-@media all and (min-width: 38em) {
-  .showcase-item {
-    width: 33.33%;
-  }
-  .showcase-item:nth-last-child(3n+2):first-child,
-  .showcase-item:nth-last-child(3n+2):first-child + .showcase-item, .showcase-item:nth-last-child(3n+1):first-child,
-  .showcase-item:nth-last-child(3n+1):first-child ~ .showcase-item:nth-child(-n+4) {
-    /* x = items
-       When x % 3 = 2, select first and second item:
-       When x % 3 = 1, select first 4 items: */
-    width: 50%;
-  }
 }
 
 @media all and (max-width: 48.33em) {
@@ -780,6 +843,23 @@ body {
 	.projectTitle{
 		margin: 0 0 5em;
 	}
+	.showcaseItem{
+		padding: 1em 1em 7em;
+	}
+	.showcaseItem:nth-last-child(3n+2):first-child,
+	.showcaseItem:nth-last-child(3n+2):first-child + .showcaseItem,
+	.showcaseItem:nth-last-child(3n+1):first-child,   /*------------------------------- 1st image */
+	.showcaseItem:nth-last-child(3n+1):first-child ~ .showcaseItem:nth-child(-n+4) /*-- 2nd - 4th image */
+	{
+		width: 100%;
+	}
+
+	.showcaseOverlay{
+		opacity: 0;
+	}
+	.showcaseImage{
+		filter:none;
+	}
 }
 
 @media all and (max-width: 30em) {
@@ -804,7 +884,6 @@ body {
 	  bottom: 5em;
 	  margin: auto;
 	}
-
 	.pagination-item.left {
 		left: 2.25rem;
 	}
@@ -835,22 +914,4 @@ body {
 	.projectTitle{
 		margin: 0 0 2em;
 	}
-}
-
-@media (any-hover: none) {
-  .showcase-caption {
-    /* The media query, enclosing these rules matches only
-       touch-screen devices that do not support hover due
-       to the lack of a pointing device like a mouse.
-       It does not work in all mobile browsers, but
-       progressively enhances the experience on supported
-       devices. Tested in Safari (iOS) 9.3 */
-    opacity: 1.0;
-    /* Reset will-change property to keep it from eating
-       up unneccessary resources on touch-only devices */
-    will-change: auto;
-  }
-  .showcase-title {
-    font-size: .85em;
-  }
 }

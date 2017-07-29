@@ -20,18 +20,17 @@ if(isset($limit)) $projects = $projects->limit($limit);
 
 ?>
 
-<ul class="showcase grid gutter-1">
-
+<ul class="showcase cf">
   <?php foreach($projects as $project): ?>
-
-    <li class="showcase-item col-3">
-        <a href="<?= $project->url() ?>" class="showcase-link">
-          <?php if($image = $project->images()->sortBy('sort', 'asc')->first()): $thumb = $image->crop(600, 600); ?>
-            <img src="<?= $thumb->url() ?>" alt="Thumbnail for <?= $project->title()->html() ?>" class="showcase-image" />
+    <li class="showcaseItem col-3">
+        <a href="<?= $project->url() ?>" class="showcaseLink">
+          <?php if($image = $project->images()->filterBy('filename', '*=', 'project-thumb')->first()): $thumb = $image->crop(1080, 1080); ?>
+            <img src="<?= $thumb->url() ?>" alt="Thumbnail for <?= $project->title()->html() ?>" class="showcaseImage" />
+            <div class="showcaseOverlay"></div>
           <?php endif ?>
-          <div class="showcase-caption">
-            <h3 class="showcase-title"><?= $project->title()->html() ?></h3>
-            <p><?= $project->role()->html() ?></p>
+          <div class="showcaseCaption">
+            <h3 class="showcaseTitle"><?= $project->title()->html() ?></h3>
+            <p class="showcaseRole"><?= $project->role()->html() ?></p>
           </div>
         </a>
     </li>

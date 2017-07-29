@@ -10,7 +10,7 @@ Summary: Product and interface design for online education.
 
 ----
 
-Role: product design, development, SME (subject matter expert)
+Role: product design & development
 
 ----
 

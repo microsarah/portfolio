@@ -10,7 +10,7 @@ Summary: A visible identity for the invisible and secret listeners.
 
 ----
 
-Role: web design, branding
+Role: web design & branding
 
 ----
 

@@ -10,7 +10,7 @@ Summary: A fresh look for young adult financial resources.
 
 ----
 
-Role: web design, web development
+Role: web design & web
 
 ----
 

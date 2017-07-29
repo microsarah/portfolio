@@ -3,15 +3,14 @@
 
   <main class="main" role="main">
 
-    <header class="wrap">
-      <h1><?= $page->title()->html() ?></h1>
-      <div class="intro text">
+    <header class="projectsHeader">
+      <h4 class="projectNum"><?= $page->projectNum() ?></h4>
+      <h1 class="projectTitle"><?= $page->title()->html() ?></h1>
+      <h2 class="projectsSummary"><?= $page->summary() ?></h2>
         <?= $page->text()->kirbytext() ?>
-      </div>
-      <hr />
     </header>
 
-    <div class="wrap wide">
+    <div class="cf">
       <?php snippet('showcase') ?>
     </div>
 

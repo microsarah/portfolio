@@ -6,13 +6,6 @@
 
   <main class="main" role="main">
 
-    <!-- <header class="wrap">
-      <div class="intro-text">
-        <h1 class="home-title" id="title"><?= $page->intro()->kirbytext() ?></h1>
-      </div>
-      <hr />
-    </header> -->
-
     <!-- =====  Header  ===========================  -->
     <header class="projectHeader" id="title">
         <h4 class="projectNum"><?= $page->projectNum() ?></h4>

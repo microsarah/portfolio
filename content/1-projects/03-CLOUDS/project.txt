@@ -10,7 +10,7 @@ Summary: An exploratory experience for an interactive documentary.
 
 ----
 
-Role: interaction design, visual design
+Role: interaction & visual design
 
 ----
 

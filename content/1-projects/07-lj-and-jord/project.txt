@@ -10,7 +10,7 @@ Summary: A digital wedding invitation for a ~very cool~ pair.
 
 ----
 
-Role: web design, web development
+Role: web design & development
 
 ----
 
