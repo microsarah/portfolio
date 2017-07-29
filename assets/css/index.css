@@ -859,7 +859,6 @@ body {
 	{
 		width: 100%;
 	}
-
 	.showcaseOverlay{
 		opacity: 0;
 	}
@@ -914,6 +913,13 @@ body {
 	}
 	.projectTitle{
 		margin: 0 0 2em;
+	}
+	.showcaseItem{
+		padding: 1em 0em 7em;
+	}
+	.showcaseCaption,
+	.showcaseTitle{
+		padding:0;
 	}
 	.top{
 		opacity: 0;
