@@ -31,14 +31,12 @@
       <?= $page->text()->kirbytext() ?>
     </div>
 
-    <section class="projectsSection" id="projects">
-
-      <div class="wrap wide">
-        <h2 class="projects-title">Recent Projects</h2>
+    <section class="projectsSection">
+      <div class="cf">
+        <h2 class="projectsTitle">Recent Projects</h2>
         <?php snippet('showcase', ['limit' => 3]) ?>
         <p class="projectsSection-more"><a href="<?= page('projects')->url() ?>" class="btn">view all</a></p>
       </div>
-
     </section>
 
   </main>

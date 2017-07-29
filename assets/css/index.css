@@ -265,6 +265,7 @@ section{
 	width:80%;
 	max-width: 1400px;
 	margin:auto;
+	padding:3em 0 0;
 }
 
 .showcaseItem {
@@ -274,7 +275,7 @@ section{
 }
 
 .showcaseItem{
-	padding:3em;
+	padding: 1.5em 1.5em 5em;
 }
 
 .showcaseItem:nth-last-child(3n+2):first-child{
@@ -317,7 +318,7 @@ section{
 
 .showcaseCaption {
 	position: absolute;
-  top: -3em;
+  top: -4.5em;
   text-align: center;
   width: 100%;
   padding: 0 1.5rem;
@@ -329,7 +330,10 @@ section{
   padding: 0 1.5rem;
 	margin:0;
 }
-
+.showcaseRole {
+	padding:.33em 0 0;
+  line-height: 1.2em;
+}
 
 .showcaseImage {
   display: block;
@@ -537,15 +541,15 @@ body {
 /* -----  4.1 Homepage  ----------------------------------------------------- */
 
 .projectsSection {
-  /*margin-top: 20vh;*/
-  padding-top: .75em;
-  padding-bottom: .75em;
+  padding: .75em 0;
+	width: 100%;
 }
 
-.projects-title{
+.projectsTitle{
 	font-size: 1.5em;
 	text-align: center;
 	font-style: italic;
+	margin: 0 0 3em;
 }
 
 .projectsSection-more {
@@ -741,13 +745,10 @@ body {
 @media all and (max-width: 83.375em) {
 	.showcase{
 		width:100%;
-		padding: 3em 10% 5em;
+		padding: 4em 7.5% 5em;
 	}
 	.showcaseItem{
-		padding: 2em 2em 5em;
-	}
-	.showcaseCaption {
-	  top: -5em;
+		padding: 1em 1em 5em;
 	}
 }
 
@@ -758,20 +759,25 @@ body {
 	.projectHeader{
 		width: auto;
 	}
-	.showcaseItem{
-		padding: 1em 1em 5em;
-	}
 }
 
-@media all and (max-width: 62.5em) {
+@media all and (max-width: 69.5em) {
 	.col-3 {
     width: 50%;
   }
 	.pagination-item.left {
-		left: .25rem;
+		left: .5rem;
 	}
-	.pagination-item.right {
-		right: .25rem;
+	.pagination-item.right,
+	.top {
+		right: .5rem;
+	}
+	.top svg{
+		margin: 0 0 0 6px;
+	}
+	.showcaseItem:last-of-type{
+		padding:2em 1em 5em;
+		width: 100%;
 	}
 }
 
@@ -879,16 +885,11 @@ body {
 		padding: 1em;
 	}
 	.pagination-item {
+		z-index: 999;
 	  position: absolute;
-		top:95%;
+		top: 100%;
 	  bottom: 5em;
 	  margin: auto;
-	}
-	.pagination-item.left {
-		left: 2.25rem;
-	}
-	.pagination-item.right {
-		right: 2.25rem;
 	}
 	.projectDetails{
 		padding: 0 5% 5em;
@@ -913,5 +914,14 @@ body {
 	}
 	.projectTitle{
 		margin: 0 0 2em;
+	}
+	.top{
+		opacity: 0;
+		right:100%;
+		left:50%;
+		transform: translateX(-50%);
+	}
+	.top svg{
+		margin: auto;
 	}
 }
