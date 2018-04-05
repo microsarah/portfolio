@@ -10,7 +10,7 @@ Summary: A fresh look for young adult financial resources.
 
 ----
 
-Role: web design & web
+Role: web design & development
 
 ----
 
@@ -18,7 +18,7 @@ Text:
 
 A sweet little redesign + build for <a href="http://invibed.com" target="blank">invibed</a>, a site that offers financial advice for millennials. I was fortunate to work in tandem with the fantastic (and yes, Blissful) <a href="http://josephjbliss.com/" target="blank">Joe Bliss</a>, who provided the JavaScript and Wordpress integration.
 
-<a href="http://invibed.com" target="blank">invibed.com</a>
+The site has been edited since this launch, but you can view my original version <a href="http://microsarah.github.io/invibed" target="blank">here</a>.
 
 ----
 

@@ -1,0 +1,34 @@
+Projectnum: 8
+
+----
+
+Title: M1X3D-5IGNALS
+
+----
+
+Summary: A video installation about communication breakdown through technology.
+
+----
+
+Role: co-creator
+
+----
+
+Text:
+
+Mixed Signals is by far one of my absolute favorite projects. Created in collaboration with <a href="http://ameliahancock.com" target="blank">Amelia Hancock</a>, the installation showed at the IAC building's ominous 120-by-11-foot video wall.
+
+Amelia and I were interested adding transparency about the location of the installation into our concept. We were intrigued by the 'uncanny valley' effect that occurs when rendering people of a certain scale, and how frequently the technology supporting the video wall can glitch and fail.
+
+----
+
+Process:
+Conceptually, were inspired by the Wizard of Oz: a staggering presence whose true form was revealed by the failings of his own technology. The video features a built-in crash and reboot ~1 minute in. (picture of Hiye crash screen)
+
+----
+
+Journey: (picture of person w/o glitch + w/glitch)
+
+----
+
+Year: 2012

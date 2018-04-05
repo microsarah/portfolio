@@ -12,8 +12,8 @@
         <h1 class="projectTitle"><?= $page->title()->html() ?></h1>
         <h2 class="projectSummary"><?= $page->summary() ?></h2>
         <nav class="menu">
-          <a class="cta" href="http://sarahmak.es/projects">work</a>
-          <a class="cta" href="http://sarahmak.es/an-internet-bio">about</a>
+          <a class="cta" href="<?= $pages->find('projects')->url() ?>">work</a>
+          <a class="cta" href="<?= $pages->find('an-internet-bio')->url() ?>">about</a>
         </nav>
     </header>
     <div class="projectThumb">

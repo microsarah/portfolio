@@ -18,7 +18,7 @@ Text:
 
 Meow Meow Tweet is a NY-based organic skincare company run by the fantastic Tara Pelletier and Jeff Kurosaki. In our six years working together, Tara and I have developed an enviably strong collaborative relationship. The packages, which feature Jeff's lovely illustrations, are truly a child of our collective brains.
 
-Meow Meow Tweet's products can be found anywhere from your local shops to Target. View a full list of their stores <a href="https://meowmeowtweet.com/pages/store-locator" target="blank">here</a>.
+View a full list of their stores <a href="https://meowmeowtweet.com/pages/store-locator" target="blank">here</a>.
 
 <a href="http://meowmeowtweet.com" target="blank">meowmeowtweet.com</a>
 

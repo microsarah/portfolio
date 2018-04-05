@@ -18,6 +18,8 @@ Text:
 
 It was so fun creating this wedding site for Laura Jo Hess and Jordan Yearsley. My favorite part of the project was incorporating the blind-contour drawings created by the couple into the design of the site.
 
+<a href="http://microsarah.github.io/lj-and-jord" target="blank">view site</a>
+
 ----
 
 Process:
